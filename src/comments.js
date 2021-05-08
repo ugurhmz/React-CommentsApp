@@ -8,10 +8,8 @@ const Comments = ({ name, timeAgo, star, comment, avatar }) => {
 
     const styleComment= {
         marginBottom:'1rem',
-        border:'1px solid black',
-        borderRadius:'.8em',
         padding:'1em 1em',
-        boxShadow:'2px  5px 5px #7bacdd',
+        
         
     }
   
