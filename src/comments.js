@@ -1,25 +1,37 @@
 import React from "react";
-import faker from 'faker'
 
-const Comments = () => {
+
+const Comments = ({ name, timeAgo, star, comment, avatar }) => {
+
+
+    
+
+    const styleComment= {
+        marginBottom:'1rem',
+        border:'1px solid black',
+        borderRadius:'.8em',
+        padding:'1em 1em',
+        boxShadow:'2px  5px 5px #7bacdd',
+        
+    }
+  
   return (
-    <div className="comment">
+    <div className="comment" style={styleComment}>
         <a className="avatar" href="/">
-            <img alt="avatar" src={faker.image.avatar()} />
+            <img  alt="avatar" src={avatar}  />
         </a>
         <div className="content">
             <a className="author" href="/">
-            Stevie Feliciano
+                {name}
             </a>
             <div className="metadata">
-            <div className="date">2 days ago</div>
+            <div className="date">{ timeAgo } days ago </div>
             <div className="rating">
-                <i className="star icon"></i>5 Faves
+                <i className="star icon"></i> { star } Star
             </div>
             </div>
             <div className="text">
-            Hey guys, I hope this example comment is helping you read this
-            documentation.
+                    { comment }
             </div>
         </div>
     </div>
